@@ -1,7 +1,10 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { UserModule } from './user/user.module';
-import { TaskModule } from './task/task.module';
+import { UserModule } from './modules/user.module';
+import { TaskModule } from './modules/task.module';
+import { UsersTaskModule } from './modules/users-task.module';
+import { CompanyModule } from './modules/company.module';
+import { CompanyUserModule } from './modules/company-user.module';
 
 @Module({
   imports: [
@@ -9,6 +12,9 @@ import { TaskModule } from './task/task.module';
     }),
     UserModule,
     TaskModule,
+    UsersTaskModule,
+    CompanyModule,
+    CompanyUserModule,
   ],
 })
 export class AppModule {}
